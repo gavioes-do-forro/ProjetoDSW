@@ -23,7 +23,7 @@
                             <a class="nav-link" href="index.jsp">Procurar Caronas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Registrar Carona</a>
+                            <a class="nav-link" href="registrarcarona.jsp">Registrar Carona</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="minhascaronas.jsp">Minhas Caronas</a>

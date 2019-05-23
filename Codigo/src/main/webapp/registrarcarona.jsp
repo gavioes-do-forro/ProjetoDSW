@@ -48,23 +48,16 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center">
-                UniversiRides
-            </h1>
-        </div>
-    </div>
-    <div class="row">
         <div class="col-md-11">
 
-            <h2>O que voce deseja?</h2>
+            <h2 class="text-center">Registrando nova carona</h2>
 
             <ul class="nav nav-pills nav-justified">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="pill" href="#IrUFG">Ir para UFG</a>
+                    <a class="nav-link active" data-toggle="pill" href="#IrUFG">Carona de ida para UFG</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#VoltarUFG">Voltar da UFG</a>
+                    <a class="nav-link" data-toggle="pill" href="#VoltarUFG">Carona de volta da UFG</a>
                 </li>
             </ul>
             <!-- Tab panes -->
@@ -137,10 +130,31 @@
                     </div>
                 </div>
             </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Horario: </h3>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Digite o horario aproximado" name="horario">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <a href="pesquisacaronas.jsp" class="btn btn-success" role="button">
-                Pesquisar
-            </a>
+            <div class="row">
+                <div class="col-md-5">
+                </div>
+                <div class="col-md-2">
+                    <a href="#" class="btn btn-success btn-block" role="button">
+                        Confirmar
+                    </a>
+                </div>
+                <div class="col-md-5">
+                </div>
+            </div>
+
         </div>
         <div class="col-md-2">
         </div>
