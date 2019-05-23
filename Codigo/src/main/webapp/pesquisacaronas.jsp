@@ -20,13 +20,13 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Procurar Caronas</a>
+                            <a class="nav-link" href="index.jsp">Procurar Caronas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Registrar Carona</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Minhas Caronas</a>
+                            <a class="nav-link" href="pesquisacaronas.jsp">Minhas Caronas</a>
                         </li>
                         <li class="nav-item dropdown">
 
@@ -56,7 +56,7 @@
                     <h4 class="card-title">Horario: 18:00</h4>
                     <p class="card-text">Origem: Bueno</p>
                     <p class="card-text">Destino: UFG</p>
-                    <a href="#" class="btn btn-primary btn-block">Estou interessado</a>
+                    <a href="carona.jsp" class="btn btn-primary btn-block">Estou interessado</a>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
                     <h4 class="card-title">Horario: 18:00</h4>
                     <p class="card-text">Origem: Sao Judas</p>
                     <p class="card-text">Destino: UFG</p>
-                    <a href="#" class="btn btn-primary btn-block">Estou interessado</a>
+                    <a href="carona.jsp" class="btn btn-primary btn-block">Estou interessado</a>
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@
                     <h4 class="card-title">Horario: 18:00</h4>
                     <p class="card-text">Origem: Sao Judas</p>
                     <p class="card-text">Destino: UFG</p>
-                    <a href="#" class="btn btn-primary btn-block">Estou interessado</a>
+                    <a href="carona.jsp" class="btn btn-primary btn-block">Estou interessado</a>
                 </div>
             </div>
         </div>
@@ -92,7 +92,7 @@
                     <h4 class="card-title">Horario: 18:00</h4>
                     <p class="card-text">Origem: Bueno</p>
                     <p class="card-text">Destino: UFG</p>
-                    <a href="#" class="btn btn-primary btn-block">Estou interessado</a>
+                    <a href="carona.jsp" class="btn btn-primary btn-block">Estou interessado</a>
                 </div>
             </div>
         </div>

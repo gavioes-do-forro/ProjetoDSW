@@ -20,13 +20,13 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Procurar Caronas</a>
+                            <a class="nav-link" href="index.jsp">Procurar Caronas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Registrar Carona</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Minhas Caronas</a>
+                            <a class="nav-link" href="pesquisacaronas.jsp">Minhas Caronas</a>
                         </li>
                         <li class="nav-item dropdown">
 
@@ -138,9 +138,9 @@
                 </div>
             </div>
 
-            <button type="button" class="btn btn-success">
+            <a href="pesquisacaronas.jsp" class="btn btn-success" role="button">
                 Pesquisar
-            </button>
+            </a>
         </div>
         <div class="col-md-2">
         </div>
