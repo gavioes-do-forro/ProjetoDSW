@@ -138,9 +138,17 @@
                 </div>
             </div>
 
-            <a href="pesquisacaronas.jsp" class="btn btn-success" role="button">
-                Pesquisar
-            </a>
+            <div class="row">
+                <div class="col-md-5">
+                </div>
+                <div class="col-md-2">
+                    <a href="pesquisacaronas.jsp" class="btn btn-success btn-block" role="button">
+                        Pesquisar
+                    </a>
+                </div>
+                <div class="col-md-5">
+                </div>
+            </div>
         </div>
         <div class="col-md-2">
         </div>
