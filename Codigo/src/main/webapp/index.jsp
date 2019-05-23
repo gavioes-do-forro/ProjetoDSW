@@ -23,7 +23,7 @@
                             <a class="nav-link" href="#">Procurar Caronas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Oferecer Caronas</a>
+                            <a class="nav-link" href="#">Registrar Carona</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Minhas Caronas</a>
