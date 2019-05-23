@@ -26,7 +26,7 @@
                             <a class="nav-link" href="#">Registrar Carona</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pesquisacaronas.jsp">Minhas Caronas</a>
+                            <a class="nav-link" href="minhascaronas.jsp">Minhas Caronas</a>
                         </li>
                         <li class="nav-item dropdown">
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Pagina inicial</title>
+    <title>Minhas caronas</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -47,25 +47,34 @@
             </nav>
         </div>
     </div>
-
     <div class="row">
-        <div class="col-sm-4">
-            <h2 class="text-center">Motorista</h2>
-            <img class="img-fluid mx-auto d-block" src="imagens/avatar-male.png" alt="Imagem motorista" style="width:80%">
-                <h5 class="text-center">Nome: Joao Silva</h5>
-                <h5 class="text-center">Vinculo com a faculdade: Discente</h5>
-        </div>
-        <div class="col-sm-5">
-            <div class="container" style="margin-top:25%">
-                <h2 class="text-center">Carona</h2>
-                <br>
-                <h5>Horario: aproximadamente as 18:00</h5>
-                <h5>Origem: Bueno</h5>
-                <h5>Destino: UFG - Campus 2</h5>
-                <button type="button" class="btn btn-success btn-block">
-                    Aceitar Carona
-                </button>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top" src="imagens/avatar-male.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <p class="card-text">Motorista: Joao Silva</p>
+                    <h4 class="card-title">Horario: 18:00</h4>
+                    <p class="card-text">Origem: Bueno</p>
+                    <p class="card-text">Destino: UFG</p>
+                    <a href="#" class="btn btn-primary btn-block">Desativar</a>
+                </div>
             </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top" src="imagens/avatar-male.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <p class="card-text">Motorista: Joao Silva</p>
+                    <h4 class="card-title">Horario: 18:00</h4>
+                    <p class="card-text">Origem: Bueno</p>
+                    <p class="card-text">Destino: UFG</p>
+                    <a href="#" class="btn btn-primary btn-block">Desativar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3">
         </div>
     </div>
 </div>
