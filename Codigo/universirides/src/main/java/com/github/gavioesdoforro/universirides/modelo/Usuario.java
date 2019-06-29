@@ -2,16 +2,21 @@ package com.github.gavioesdoforro.universirides.modelo;
 
 import com.github.gavioesdoforro.universirides.modelo.enums.Vinculo;
 
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Usuario extends ObjetoPadrao{
+@Entity
+public class Usuario extends ObjetoPadrao {
 
     private String nome;
     private String whatsApp;
 
     private Vinculo vinculo;
 
+    @OneToMany(mappedBy = "usuario", fetch = FetchType.LAZY)
     private List<Carona> caronasList = new ArrayList<>();
 
 
@@ -45,5 +50,16 @@ public class Usuario extends ObjetoPadrao{
 
     public void setCaronasList(List<Carona> caronasList) {
         this.caronasList = caronasList;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + this.getId() +
+                ", nome='" + nome + '\'' +
+                ", whatsApp='" + whatsApp + '\'' +
+                ", vinculo=" + vinculo +
+                ", caronasList=" + caronasList +
+                '}';
     }
 }

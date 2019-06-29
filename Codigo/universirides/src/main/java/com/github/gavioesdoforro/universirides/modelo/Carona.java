@@ -2,11 +2,26 @@ package com.github.gavioesdoforro.universirides.modelo;
 
 import com.github.gavioesdoforro.universirides.modelo.enums.Tipo;
 
-public class Carona extends ObjetoPadrao{
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Carona extends ObjetoPadrao {
 
     private String descricao;
 
     private Tipo tipo;
+
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "bairro", nullable = false)
+    private Bairro bairro;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "usuario_id", nullable = false)
+    private Usuario usuario;
 
 
     public String getDescricao() {
@@ -23,5 +38,32 @@ public class Carona extends ObjetoPadrao{
 
     public void setTipo(Tipo tipo) {
         this.tipo = tipo;
+    }
+
+    public Bairro getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(Bairro bairro) {
+        this.bairro = bairro;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    @Override
+    public String toString() {
+        return "Carona{" +
+                "id=" + this.getId() +
+                ", descricao='" + descricao + '\'' +
+                ", tipo=" + tipo +
+                ", bairro=" + bairro +
+                ", usuario=" + usuario.getId() +
+                '}';
     }
 }
