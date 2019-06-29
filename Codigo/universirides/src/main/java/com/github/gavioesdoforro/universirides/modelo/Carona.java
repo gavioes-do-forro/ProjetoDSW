@@ -2,7 +2,7 @@ package com.github.gavioesdoforro.universirides.modelo;
 
 import com.github.gavioesdoforro.universirides.modelo.enums.Tipo;
 
-public class Carona {
+public class Carona extends ObjetoPadrao{
 
     private String descricao;
 

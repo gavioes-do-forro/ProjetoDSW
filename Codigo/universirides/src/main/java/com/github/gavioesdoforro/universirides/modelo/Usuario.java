@@ -5,7 +5,7 @@ import com.github.gavioesdoforro.universirides.modelo.enums.Vinculo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Usuario {
+public class Usuario extends ObjetoPadrao{
 
     private String nome;
     private String whatsApp;
