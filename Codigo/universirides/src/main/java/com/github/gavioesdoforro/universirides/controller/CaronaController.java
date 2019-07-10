@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
-public class ControllerExampleJSP {
+public class CaronaController {
 
     @Autowired
     private IRepositorioCarona repositorioCarona;
