@@ -68,4 +68,14 @@ public class CaronaController {
         repositorioCarona.deleteById(id);
         return "redirect:/carona/";
     }
+
+    @RequestMapping("/search")
+    public ModelAndView search(@RequestParam String keyword) {
+        List<Carona> result = repositorioCarona.
+                findByBairroContainingIgnoreCaseOrDescricaoContainingIgnoreCase(keyword, keyword);
+        ModelAndView mav = new ModelAndView("resultado_busca");
+        mav.addObject("result", result);
+
+        return mav;
+    }
 }
