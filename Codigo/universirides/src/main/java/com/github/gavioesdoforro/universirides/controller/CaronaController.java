@@ -31,7 +31,7 @@ public class CaronaController {
     @RequestMapping("/")
     public ModelAndView home() {
         List<Carona> listCaronas = repositorioCarona.findAll();
-        ModelAndView mav = new ModelAndView("index");
+        ModelAndView mav = new ModelAndView("visualizar_caronas");
         mav.addObject("listCaronas", listCaronas);
         return mav;
     }
