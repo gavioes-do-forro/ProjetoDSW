@@ -18,6 +18,10 @@
                 <td><form:input path="descricao" /></td>
             </tr>
             <tr>
+                <td>Bairro: </td>
+                <td><form:input path="bairro" /></td>
+            </tr>
+            <tr>
                 <td>Tipo: </td>
                 <td><form:select name="TipoCarona" path="tipo" items="${tipos}">
                     </form:select>

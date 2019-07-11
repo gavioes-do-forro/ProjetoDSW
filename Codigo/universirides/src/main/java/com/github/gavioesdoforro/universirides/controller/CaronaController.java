@@ -1,11 +1,9 @@
 package com.github.gavioesdoforro.universirides.controller;
 
-import com.github.gavioesdoforro.universirides.modelo.Bairro;
 import com.github.gavioesdoforro.universirides.modelo.Carona;
 import com.github.gavioesdoforro.universirides.modelo.Usuario;
 import com.github.gavioesdoforro.universirides.modelo.enums.Tipo;
 import com.github.gavioesdoforro.universirides.modelo.enums.Turno;
-import com.github.gavioesdoforro.universirides.repositorio.IRepositorioBairro;
 import com.github.gavioesdoforro.universirides.repositorio.IRepositorioCarona;
 import com.github.gavioesdoforro.universirides.repositorio.IRepositorioUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +25,6 @@ public class CaronaController {
     private IRepositorioCarona repositorioCarona;
 
     @Autowired
-    private IRepositorioBairro repositorioBairro;
-
-    @Autowired
     private IRepositorioUsuario repositorioUsuario;
 
     @RequestMapping("/")
@@ -44,28 +39,26 @@ public class CaronaController {
     public String newCaronaForm(Map<String, Object> model) {
         Carona carona = new Carona();
         model.put("carona", carona);
-        model.put("tipos",Tipo.values());
+        model.put("tipos", Tipo.values());
         model.put("turnos", Turno.values());
         return "nova_carona";
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String saveCarona(@ModelAttribute("carona") Carona carona) {
-        Bairro bairro = repositorioBairro.findById((long)1).get();
-        Usuario usuario = repositorioUsuario.findById((long)2).get();
-        carona.setBairro(bairro);
+        Usuario usuario = repositorioUsuario.findById((long) 1).get();
         carona.setUsuario(usuario);
         repositorioCarona.save(carona);
         return "redirect:/carona/";
     }
 
     @RequestMapping("/edit")
-    public ModelAndView editCaronaForm(@RequestParam long id,Map<String, Object> model) {
+    public ModelAndView editCaronaForm(@RequestParam long id, Map<String, Object> model) {
         ModelAndView mav = new ModelAndView("edit_carona");
         Carona carona = repositorioCarona.getOne(id);
         mav.addObject("carona", carona);
         model.put("carona", carona);
-        model.put("tipos",Tipo.values());
+        model.put("tipos", Tipo.values());
         model.put("turnos", Turno.values());
         return mav;
     }

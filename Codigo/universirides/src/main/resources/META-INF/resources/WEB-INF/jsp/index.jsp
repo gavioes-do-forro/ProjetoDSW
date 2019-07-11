@@ -22,7 +22,7 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
             <th>Turno</th>
             <th>Bairro</th>
             <th>Usuario</th>
-            <%--<th>Action</th>--%>
+            <th>Ação</th>
         </tr>
         <c:forEach items="${listCaronas}" var="carona">
             <tr>
@@ -30,12 +30,12 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
                 <td>${carona.descricao}</td>
                 <td>${carona.tipo}</td>
                 <td>${carona.turno}</td>
-                <td>${carona.bairro.nome}</td>
+                <td>${carona.bairro}</td>
                 <td>${carona.usuario.nome}</td>
                 <td>
-                   <a href="/carona/edit?id=${carona.id}">Edit</a>
+                   <a href="/carona/edit?id=${carona.id}">Editar</a>
                     &nbsp;&nbsp;&nbsp;
-                    <a href="/carona/delete?id=${carona.id}">Delete</a>
+                    <a href="/carona/delete?id=${carona.id}">Deletar</a>
                 </td>
             </tr>
         </c:forEach>

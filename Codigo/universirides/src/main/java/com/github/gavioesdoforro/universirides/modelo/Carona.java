@@ -17,10 +17,7 @@ public class Carona extends ObjetoPadrao {
 
     private Turno turno;
 
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "bairro", nullable = false)
-    private Bairro bairro;
+    private String bairro;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "usuario_id", nullable = false)
@@ -43,11 +40,11 @@ public class Carona extends ObjetoPadrao {
         this.tipo = tipo;
     }
 
-    public Bairro getBairro() {
+    public String getBairro() {
         return bairro;
     }
 
-    public void setBairro(Bairro bairro) {
+    public void setBairro(String bairro) {
         this.bairro = bairro;
     }
 
@@ -73,7 +70,7 @@ public class Carona extends ObjetoPadrao {
                 "descricao='" + descricao + '\'' +
                 ", tipo=" + tipo +
                 ", turno=" + turno +
-                ", bairro=" + bairro.getNome() +
+                ", bairro='" + bairro + '\'' +
                 ", usuario=" + usuario.getNome() +
                 '}';
     }
