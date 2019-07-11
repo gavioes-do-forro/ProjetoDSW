@@ -20,7 +20,7 @@
                     </td>
                 </tr>
             <tr>
-                <td>Descricao: </td>
+                <td>Descrição: </td>
                 <td><form:input path="descricao" /></td>
             </tr>
             <tr>

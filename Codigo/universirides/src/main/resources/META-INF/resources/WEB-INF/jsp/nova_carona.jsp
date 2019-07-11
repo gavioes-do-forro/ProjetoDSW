@@ -14,7 +14,7 @@
     <form:form action="save" method="post" modelAttribute="carona">
         <table border="0" cellpadding="5">
             <tr>
-                <td>Descricao: </td>
+                <td>Descrição: </td>
                 <td><form:input path="descricao" /></td>
             </tr>
             <tr>

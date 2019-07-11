@@ -17,11 +17,11 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
     <table border="1" cellpadding="5">
         <tr>
             <th>Id</th>
-            <th>Descricao</th>
+            <th>Descrição</th>
             <th>Tipo</th>
             <th>Turno</th>
             <th>Bairro</th>
-            <th>Usuario</th>
+            <th>Usuário</th>
             <th>Ação</th>
         </tr>
         <c:forEach items="${listCaronas}" var="carona">
