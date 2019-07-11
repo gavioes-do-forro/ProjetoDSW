@@ -2,6 +2,7 @@ package com.github.gavioesdoforro.universirides.configuracao;
 
 import com.github.gavioesdoforro.universirides.modelo.Carona;
 import com.github.gavioesdoforro.universirides.modelo.Usuario;
+import com.github.gavioesdoforro.universirides.modelo.enums.Status;
 import com.github.gavioesdoforro.universirides.modelo.enums.Tipo;
 import com.github.gavioesdoforro.universirides.modelo.enums.Turno;
 import com.github.gavioesdoforro.universirides.modelo.enums.Vinculo;
@@ -34,6 +35,7 @@ public class Instanciacao implements CommandLineRunner {
         carona.setBairro("Sao Judas");
         carona.setUsuario(usuario);
         carona.setDescricao("Indo para a UFG as 12:00");
+        carona.setStatus(Status.Aberto);
 
         System.out.println(iRepositorioUsuario.save(usuario));
         System.out.println(iRepositorioCarona.save(carona));

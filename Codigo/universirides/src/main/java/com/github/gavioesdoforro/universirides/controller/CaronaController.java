@@ -2,6 +2,7 @@ package com.github.gavioesdoforro.universirides.controller;
 
 import com.github.gavioesdoforro.universirides.modelo.Carona;
 import com.github.gavioesdoforro.universirides.modelo.Usuario;
+import com.github.gavioesdoforro.universirides.modelo.enums.Status;
 import com.github.gavioesdoforro.universirides.modelo.enums.Tipo;
 import com.github.gavioesdoforro.universirides.modelo.enums.Turno;
 import com.github.gavioesdoforro.universirides.repositorio.IRepositorioCarona;
@@ -48,6 +49,15 @@ public class CaronaController {
     public String saveCarona(@ModelAttribute("carona") Carona carona) {
         Usuario usuario = repositorioUsuario.findById((long) 1).get();
         carona.setUsuario(usuario);
+        carona.setStatus(Status.Aberto);
+        repositorioCarona.save(carona);
+        return "redirect:/carona/";
+    }
+
+    @RequestMapping(value = "/update", method = RequestMethod.PUT)
+    public String updateCarona(@ModelAttribute("carona") Carona carona) {
+        Usuario usuario = repositorioUsuario.findById((long) 1).get();
+        carona.setUsuario(usuario);
         repositorioCarona.save(carona);
         return "redirect:/carona/";
     }
@@ -60,6 +70,7 @@ public class CaronaController {
         model.put("carona", carona);
         model.put("tipos", Tipo.values());
         model.put("turnos", Turno.values());
+        model.put("status", Status.values());
         return mav;
     }
 

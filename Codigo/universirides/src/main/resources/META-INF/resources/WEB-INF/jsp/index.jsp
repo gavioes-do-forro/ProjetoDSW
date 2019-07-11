@@ -14,7 +14,7 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
     <form method="get" action="search">
         <input type="text" name="keyword" /> &nbsp;
-        <input type="submit" value="Search" />
+        <input type="submit" value="Buscar" />
     </form>
 
     <h3><a href="/carona/new">Nova Carona</a></h3>
@@ -27,6 +27,7 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
             <th>Turno</th>
             <th>Bairro</th>
             <th>Usuário</th>
+            <th>Status</th>
             <th>Ação</th>
         </tr>
         <c:forEach items="${listCaronas}" var="carona">
@@ -37,6 +38,7 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
                 <td>${carona.turno}</td>
                 <td>${carona.bairro}</td>
                 <td>${carona.usuario.nome}</td>
+                <td>${carona.status}</td>
                 <td>
                    <a href="/carona/edit?id=${carona.id}">Editar</a>
                     &nbsp;&nbsp;&nbsp;

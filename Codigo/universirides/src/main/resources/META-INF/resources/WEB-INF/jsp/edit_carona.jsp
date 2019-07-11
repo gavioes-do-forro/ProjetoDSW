@@ -11,7 +11,7 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <body>
 <div align="center">
     <h2>Editar Carona</h2>
-    <form:form action="save" method="post" modelAttribute="carona">
+    <form:form action="update" method="put" modelAttribute="carona">
         <table border="0" cellpadding="5">
             <tr style="visibility: hidden">
                 <td>ID: </td>
@@ -20,7 +20,7 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
                     </td>
                 </tr>
             <tr>
-                <td>DescriÃ§Ã£o: </td>
+                <td>Descrição: </td>
                 <td><form:input path="descricao" /></td>
             </tr>
             <tr>
@@ -35,12 +35,18 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
             </tr>
             <tr>
                 <td>Turno: </td>
-                <td><form:select name="TipoCarona" path="turno" items="${turnos}">
+                <td><form:select name="TurnoCarona" path="turno" items="${turnos}">
                 </form:select>
                 </td>
             </tr>
             <tr>
-                <td colspan="2"><input type="submit" value="Save"></td>
+                <td>Status: </td>
+                <td><form:select name="StatusCarona" path="status" items="${status}">
+                </form:select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Atualizar"></td>
             </tr>
         </table>
     </form:form>

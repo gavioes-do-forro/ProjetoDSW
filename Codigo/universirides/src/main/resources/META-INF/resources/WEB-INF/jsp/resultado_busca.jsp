@@ -19,6 +19,7 @@
             <th>Turno</th>
             <th>Bairro</th>
             <th>Usuário</th>
+            <th>Status</th>
             <th>Ação</th>
         </tr>
         <c:forEach items="${result}" var="carona">
@@ -29,6 +30,7 @@
                 <td>${carona.turno}</td>
                 <td>${carona.bairro}</td>
                 <td>${carona.usuario.nome}</td>
+                <td>${carona.status}</td>
                 <td>
                     <a href="/carona/edit?id=${carona.id}">Editar</a>
                     &nbsp;&nbsp;&nbsp;

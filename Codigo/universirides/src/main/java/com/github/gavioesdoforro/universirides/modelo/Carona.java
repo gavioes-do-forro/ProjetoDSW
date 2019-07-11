@@ -1,5 +1,6 @@
 package com.github.gavioesdoforro.universirides.modelo;
 
+import com.github.gavioesdoforro.universirides.modelo.enums.Status;
 import com.github.gavioesdoforro.universirides.modelo.enums.Tipo;
 import com.github.gavioesdoforro.universirides.modelo.enums.Turno;
 
@@ -16,6 +17,8 @@ public class Carona extends ObjetoPadrao {
     private Tipo tipo;
 
     private Turno turno;
+
+    private Status status;
 
     private String bairro;
 
@@ -64,6 +67,15 @@ public class Carona extends ObjetoPadrao {
         this.turno = turno;
     }
 
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "Carona{" +
@@ -74,4 +86,5 @@ public class Carona extends ObjetoPadrao {
                 ", usuario=" + usuario.getNome() +
                 '}';
     }
+
 }
