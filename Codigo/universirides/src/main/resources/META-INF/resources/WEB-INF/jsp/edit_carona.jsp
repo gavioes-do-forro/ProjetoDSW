@@ -21,11 +21,11 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
                 </tr>
             <tr>
                 <td>Descrição: </td>
-                <td><form:input path="descricao" /></td>
+                <td><form:input path="descricao" required="required"/></td>
             </tr>
             <tr>
                 <td>Bairro: </td>
-                <td><form:input path="bairro" /></td>
+                <td><form:input path="bairro" required="required"/></td>
             </tr>
             <tr>
                 <td>Tipo: </td>

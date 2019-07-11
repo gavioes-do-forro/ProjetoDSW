@@ -14,12 +14,12 @@
     <form:form action="save" method="post" modelAttribute="carona">
         <table border="0" cellpadding="5">
             <tr>
-                <td>DescriÃ§Ã£o: </td>
-                <td><form:input path="descricao" /></td>
+                <td>Descrição: </td>
+                <td><form:input path="descricao" required="required"/></td>
             </tr>
             <tr>
                 <td>Bairro: </td>
-                <td><form:input path="bairro" /></td>
+                <td><form:input path="bairro" required="required"/></td>
             </tr>
             <tr>
                 <td>Tipo: </td>
