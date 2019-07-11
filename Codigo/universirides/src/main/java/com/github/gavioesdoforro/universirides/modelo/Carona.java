@@ -1,6 +1,7 @@
 package com.github.gavioesdoforro.universirides.modelo;
 
 import com.github.gavioesdoforro.universirides.modelo.enums.Tipo;
+import com.github.gavioesdoforro.universirides.modelo.enums.Turno;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -13,6 +14,8 @@ public class Carona extends ObjetoPadrao {
     private String descricao;
 
     private Tipo tipo;
+
+    private Turno turno;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -56,14 +59,22 @@ public class Carona extends ObjetoPadrao {
         this.usuario = usuario;
     }
 
+    public Turno getTurno() {
+        return turno;
+    }
+
+    public void setTurno(Turno turno) {
+        this.turno = turno;
+    }
+
     @Override
     public String toString() {
         return "Carona{" +
-                "id=" + this.getId() +
-                ", descricao='" + descricao + '\'' +
+                "descricao='" + descricao + '\'' +
                 ", tipo=" + tipo +
-                ", bairro=" + bairro +
-                ", usuario=" + usuario.getId() +
+                ", turno=" + turno +
+                ", bairro=" + bairro.getNome() +
+                ", usuario=" + usuario.getNome() +
                 '}';
     }
 }

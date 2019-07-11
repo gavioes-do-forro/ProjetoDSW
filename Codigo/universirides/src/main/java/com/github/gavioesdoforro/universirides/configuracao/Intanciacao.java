@@ -4,6 +4,7 @@ import com.github.gavioesdoforro.universirides.modelo.Bairro;
 import com.github.gavioesdoforro.universirides.modelo.Carona;
 import com.github.gavioesdoforro.universirides.modelo.Usuario;
 import com.github.gavioesdoforro.universirides.modelo.enums.Tipo;
+import com.github.gavioesdoforro.universirides.modelo.enums.Turno;
 import com.github.gavioesdoforro.universirides.modelo.enums.Vinculo;
 import com.github.gavioesdoforro.universirides.repositorio.IRepositorioBairro;
 import com.github.gavioesdoforro.universirides.repositorio.IRepositorioCarona;
@@ -36,7 +37,8 @@ public class Intanciacao implements CommandLineRunner {
         usuario.setVinculo(Vinculo.Discente);
 
         Carona carona = new Carona();
-        carona.setTipo(Tipo.IdaVespertino);
+        carona.setTipo(Tipo.Ida);
+        carona.setTurno(Turno.Verspertino);
         carona.setBairro(bairro);
         carona.setUsuario(usuario);
         carona.setDescricao("Indo para a UFG as 12:00");
