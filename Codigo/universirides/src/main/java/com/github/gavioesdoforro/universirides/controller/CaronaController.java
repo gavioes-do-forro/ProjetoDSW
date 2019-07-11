@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -40,7 +41,7 @@ public class CaronaController {
     }
 
     @RequestMapping("/new")
-    public String newCustomerForm(Map<String, Object> model) {
+    public String newCaronaForm(Map<String, Object> model) {
         Carona carona = new Carona();
         model.put("carona", carona);
         model.put("tipos",Tipo.values());
@@ -49,7 +50,7 @@ public class CaronaController {
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String saveCustomer(@ModelAttribute("customer") Carona carona) {
+    public String saveCarona(@ModelAttribute("carona") Carona carona) {
         Bairro bairro = repositorioBairro.findById((long)1).get();
         Usuario usuario = repositorioUsuario.findById((long)2).get();
         carona.setBairro(bairro);
@@ -58,4 +59,20 @@ public class CaronaController {
         return "redirect:/carona/";
     }
 
+    @RequestMapping("/edit")
+    public ModelAndView editCaronaForm(@RequestParam long id,Map<String, Object> model) {
+        ModelAndView mav = new ModelAndView("edit_carona");
+        Carona carona = repositorioCarona.getOne(id);
+        mav.addObject("carona", carona);
+        model.put("carona", carona);
+        model.put("tipos",Tipo.values());
+        model.put("turnos", Turno.values());
+        return mav;
+    }
+
+    @RequestMapping("/delete")
+    public String deleteCaronaForm(@RequestParam long id) {
+        repositorioCarona.deleteById(id);
+        return "redirect:/carona/";
+    }
 }

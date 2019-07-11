@@ -32,11 +32,11 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
                 <td>${carona.turno}</td>
                 <td>${carona.bairro.nome}</td>
                 <td>${carona.usuario.nome}</td>
-                <%--<td>--%>
-                    <%--<a href="/edit?id=${carona.id}">Edit</a>--%>
-                    <%--&nbsp;&nbsp;&nbsp;--%>
-                    <%--<a href="/delete?id=${carona.id}">Delete</a>--%>
-                <%--</td>--%>
+                <td>
+                   <a href="/carona/edit?id=${carona.id}">Edit</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="/carona/delete?id=${carona.id}">Delete</a>
+                </td>
             </tr>
         </c:forEach>
     </table>
